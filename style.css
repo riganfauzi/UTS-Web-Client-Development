@@ -59,7 +59,7 @@
   .text h1 {
     font-family: 'Mulish', sans-serif;
     font-size: 40px;
-    font-weight: 400;
+    font-weight: 600;
   }
   
   /* Check font styling */
@@ -84,11 +84,19 @@
     background: #69B99D;
     border: none;
     padding: 14px 32px;
-    border-radius: 4px;
+    border-radius: 8px;
     color: white;
     font-weight: bold;
     cursor: pointer;
     align-items: center;
+    width: 100%;
+    max-width: 200px;
+    justify-content: center;
+    font-size: clamp(14px, 2vw, 16px);
+    line-height: 1.5;
+    padding: clamp(10px, 2vw, 14px) clamp(16px, 5vw, 32px);
+    height: auto;
+    transition: all 0.3s ease;
   }
   
   /* Handle when user hover on the button */
@@ -130,6 +138,7 @@
   
   .text {
     animation: fadeInUp 1s ease-out;
+    width: 100%;
   }
 
   @keyframes slideInRight {
@@ -146,3 +155,72 @@
   .slide-in-right {
     animation: slideInRight 1s ease-out;
   }
+
+  /* === Responsive Breakpoints === */
+
+/* Tablet: max 900px */
+@media (max-width: 900px) {
+  .page {
+    width: 90%;
+    padding-top: 32px;
+  }
+
+  main {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .text h1 {
+    font-size: 32px;
+  }
+
+  .text p {
+    font-size: 15px;
+  }
+
+  .text button {
+    justify-content: center;
+  }
+
+  main img {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Smartphone: max 600px */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .text h1 {
+    font-size: 28px;
+  }
+
+  .text p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .text button {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+
+  #balls {
+    display: none; /* Hilangkan dekorasi bola di HP untuk kesederhanaan */
+  }
+}
