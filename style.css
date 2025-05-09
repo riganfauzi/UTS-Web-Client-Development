@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  /* font-family: 'Mulish', sans-serif;
+  font-family: 'Open Sans', sans-serif; */
+  
+  body {
+    background: linear-gradient(180deg, rgba(227, 255, 248, 0) 82.08%, rgba(227, 255, 248, 0.38) 100%);
+  
+    min-height: 100vh;
+  }
+  
+  .page {
+    width: 1040px;
+    margin: 0px auto;
+    padding-top: 48px;
+  }
+  
+  /* Check margin */
+  nav {
+    font-family: 'Mulish', sans-serif;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Check list styling */
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 48px;
+  }
+  
+  /* Check list link style */
+  nav ul li a {
+  text-decoration: none;
+  color: #1F1534;
+  opacity: 0.5;
+  transition: 0.3s;
+  font-weight: 400;
+  }
+  
+  /* Make text bold on hover */
+  nav ul li a:hover {
+    font-weight: 700;
+    opacity: 1;
+  }
+
+  main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 64px;
+  }
+  
+  /* Check margin and font styling */
+  .text h1 {
+    font-family: 'Mulish', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+  }
+  
+  /* Check font styling */
+  .text h1 span {
+    color: #89C5CC;
+  }
+  
+  /* Check font styling */
+  .text p {
+    font-family: 'Open Sans', sans-serif; 
+    color: #7D7987;
+    margin: 40px 0;
+    font-size: 16px;
+    line-height: 28px;
+  }
+  
+  /* Check font styling and make sure the button is rounded */
+  .text button {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    gap: 8px;
+    background: #69B99D;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    align-items: center;
+    width: 100%;
+    max-width: 200px;
+    justify-content: center;
+    font-size: clamp(14px, 2vw, 16px);
+    line-height: 1.5;
+    padding: clamp(10px, 2vw, 14px) clamp(16px, 5vw, 32px);
+    height: auto;
+    transition: all 0.3s ease;
+  }
+  
+  /* Handle when user hover on the button */
+  .text button:hover {
+    background: #4EA788;
+    transform: scale(1.05);
+  }
+  
+  /* Check the text styling */
+  footer {
+    font-family: 'Open Sans', sans-serif; 
+    text-align: center;
+  margin-bottom: 8px;
+  }
+  
+  /* Check the text styling */
+  footer a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  
+  #balls {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .text {
+    animation: fadeInUp 1s ease-out;
+    width: 100%;
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .slide-in-right {
+    animation: slideInRight 1s ease-out;
+  }
+
+  /* === Responsive Breakpoints === */
+
+/* Tablet: max 900px */
+@media (max-width: 900px) {
+  .page {
+    width: 90%;
+    padding-top: 32px;
+  }
+
+  main {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .text h1 {
+    font-size: 32px;
+  }
+
+  .text p {
+    font-size: 15px;
+  }
+
+  .text button {
+    justify-content: center;
+  }
+
+  main img {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Smartphone: max 600px */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .text h1 {
+    font-size: 28px;
+  }
+
+  .text p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .text button {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+
+  #balls {
+    display: none; /* Hilangkan dekorasi bola di HP untuk kesederhanaan */
+  }
+}
