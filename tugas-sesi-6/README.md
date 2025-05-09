@@ -7,16 +7,6 @@ Proyek ini berupa aplikasi **katalog Pokémon** yang menampilkan daftar Pokémon
 
 ---
 
-## 🖼️ Tampilan Aplikasi
-
-| List View                                            | Detail View                                              |
-| ---------------------------------------------------- | -------------------------------------------------------- |
-| ![List View Screenshot](./screenshots/list-view.png) | ![Detail View Screenshot](./screenshots/detail-view.png) |
-
-> _(Silakan tambahkan tangkapan layar ke dalam folder `screenshots/` dan ubah nama file sesuai kebutuhan.)_
-
----
-
 ## 📦 Fitur Utama
 
 - 🧭 Navbar dengan fitur pencarian Pokémon
